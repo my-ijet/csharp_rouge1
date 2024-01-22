@@ -56,10 +56,11 @@ void logick()
 
 void printControls()
 {
+  string text = "Arrows: Move | [Esc, Q]: Quit";
+  string border = new('─', text.Length - 2);
+
   Console.SetCursorPosition(0, level.walls.Length + 1);
-  Console.WriteLine(" ╭───────────────────────────╮");
-  Console.WriteLine(" Arrows: Move | [Esc, Q]: Quit");
-  Console.WriteLine(" ╰───────────────────────────╯");
+  Console.WriteLine($" ╭{border}╮\n {text}\n ╰{border}╯");
 }
 
 void printPlayer()
